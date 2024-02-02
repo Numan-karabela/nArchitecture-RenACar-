@@ -20,6 +20,7 @@ namespace Persistence
             services.AddDbContext<BaseDbContext>(options =>
                                                      options.UseSqlServer(
                                                          configuration.GetConnectionString("TemplateProjectConnectionString")));
+
             services.AddScoped<ISomeFeatureEntityRepository, SomeFeatureEntityRepository>();
 
             return services;
